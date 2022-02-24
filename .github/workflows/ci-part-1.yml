@@ -19,7 +19,7 @@ jobs:
       - name : find artifact
         run: |
           ls -ltr
-          cd buil/libs
+          cd build/libs
           ls -ltr
           
           
