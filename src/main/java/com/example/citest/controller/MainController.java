@@ -11,9 +11,11 @@ public class MainController {
 
     @GetMapping
     public String sayHey(){
-        //some changes
-        System.out.println("some change");
-        System.out.println("some other change");
+        /*
+          chedd.c.d,vd<';das
+          ldvml;dmsl;d;l,dvs
+          ldksvmlmlkdvmslmv
+         */
         return "Hello Guys!!!!!";
     }
 
