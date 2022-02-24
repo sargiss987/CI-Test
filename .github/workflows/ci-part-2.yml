@@ -1,1 +1,9 @@
-
+name: CI-part-1
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: hello message
+        run: echo "hello"
