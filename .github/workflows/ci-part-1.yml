@@ -11,6 +11,8 @@ jobs:
         with:
          java-version: '11'
          distribution: 'temurin'
+      - name: make gradlew exe
+        run: chmod +x gradlew
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build --scan
