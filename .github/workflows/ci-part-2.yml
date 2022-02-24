@@ -1,7 +1,8 @@
 name: CI-part-2
-on: 
-  pull_request:
-    branches: [master]
+on:
+  push:
+    branches:
+      - master
     
 jobs:
   build:
