@@ -1,5 +1,5 @@
 name: CI-part-1
-on: [push]
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
