@@ -14,4 +14,9 @@ public class MainController {
         //some changes
         return "Hello Guys!!!!!";
     }
+
+    @GetMapping
+    public String sayBye(){
+        return "Bye!!!!!";
+    }
 }
