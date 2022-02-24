@@ -11,5 +11,7 @@ jobs:
         with:
          java-version: '11'
          distribution: 'temurin'
+      - name: make gradlew exe
+        run: chmod +x gradlew   
       - name: Build with gradle
         run: ./gradlew build
