@@ -11,8 +11,13 @@ jobs:
         with:
          java-version: '11'
          distribution: 'temurin'
-      - name: Build with gradle
-        uses: gradle/gradle-build-action@v2.1.3
+      - uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build --scan
       - name: list current dir
-        run: ls -ltr
+        run: |
+          cd src
+          ls -ltr
+          
+          
         
