@@ -1,5 +1,5 @@
 name: CI-part-1
-on: [push]
+on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,11 +16,7 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build --scan
-      - name : find artifact
-        run: |
-          ls -ltr
-          cd build/libs
-          ls -ltr
+      
           
           
         
