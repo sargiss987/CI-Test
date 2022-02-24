@@ -15,7 +15,7 @@ public class MainController {
         return "Hello Guys!!!!!";
     }
 
-    @GetMapping
+    @GetMapping("bye")
     public String sayBye(){
         return "Bye!!!!!";
     }
