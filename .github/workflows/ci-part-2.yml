@@ -20,4 +20,9 @@ jobs:
       - uses: gradle/gradle-build-action@v2
         with:
           arguments: build --scan
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.3.1
+        with:
+           path: /home/runner/work/build/libs/CI-Test-0.0.1-SNAPSHOT.jar
+           
        
