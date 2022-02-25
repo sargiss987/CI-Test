@@ -6,9 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # v2 minimum required
-      - uses: matheusalbino/git-commit@v1.0.1
-        with:
-          github-token: 
+      - name: config
+        run: |
+          git config --global user.name "sargiss987"
+          git config --global user.password "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"
       - uses: axel-op/googlejavaformat-action@v3
       
         
