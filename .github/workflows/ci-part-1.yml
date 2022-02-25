@@ -1,6 +1,15 @@
 name: CI-part-1
 on: [pull_request]
 jobs:
+  
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # v2 minimum required
+      - uses: axel-op/googlejavaformat-action@v3
+        with:
+          args: "--skip-sorting-imports --replace"
+
   build:
     runs-on: ubuntu-latest
     
