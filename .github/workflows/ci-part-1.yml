@@ -5,9 +5,7 @@ jobs:
   formatting:
     runs-on: ubuntu-latest
     steps:
-      - uses: axel-op/googlejavaformat-action@v3
-        with:
-         args: "--skip-sorting-imports --replace"
+      - uses: actions/checkout@v2 # v2 minimum required
 
   build:
     runs-on: ubuntu-latest
