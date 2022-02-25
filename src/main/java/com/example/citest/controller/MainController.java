@@ -6,17 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+
+
+
 @RequestMapping("/")
 public class MainController {
 
     @GetMapping
-    public String sayHey(){
+    public String                      sayHey(){
         /*
           chedd.c.d,vd<';das
           ldvml;dmsl;d;l,dvs
           ldksvmlmlkdvmslmv
          */
-        return "Hello Guys!!!!!";
+                                    return "Hello Guys!!!!!";
     }
 
     @GetMapping("bye")
