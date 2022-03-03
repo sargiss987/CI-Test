@@ -1,6 +1,8 @@
 package com.example.citest.controller;
 
-import org.springframework.stereotype.Controller;
+import com.example.citest.model.User;
+import com.example.citest.repository.UserRepository;
+import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,18 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class MainController {
 
-    @GetMapping
-    public String sayHey(){
-        /*
-          chedd.c.d,vd<';das
-          ldvml;dmsl;d;l,dvs
-          ldksvmlmlkdvmslmv
-         */
-        return "Hello Guys!!!!!";
-    }
+  private final UserRepository userRepository;
 
-    @GetMapping("bye")
-    public String sayBye(){
-        return "Bye!!!!!";
-    }
+  public MainController(UserRepository userRepository) {
+    this.userRepository = userRepository;
+  }
+
+  @GetMapping
+  public List<User> listUsers() {
+    return userRepository.findAll();
+  }
 }
