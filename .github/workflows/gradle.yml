@@ -16,7 +16,11 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name: Make gradle executable
+      run: chmod +x gradlew    
     - name: Build with Gradle
       uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
       with:
         arguments: build
+#     - name: Execute jar file
+#       run: sudo kill -9 `sudo lsof -t -i:80` & sudo java -jar 
