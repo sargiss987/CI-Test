@@ -24,6 +24,7 @@ jobs:
   run:
   
     runs-on: self-hosted
+    needs: [build]
       
     steps:  
       - name: Execute jar file
