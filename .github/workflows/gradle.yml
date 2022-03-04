@@ -21,12 +21,5 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
-  
-  run:   
-
-    runs-on: self-hosted
-    needs: [build]
-  
-    steps:
       - name: Execute jar file
         run: sudo kill -9 `sudo lsof -t -i:80` & sudo java -jar /home/ubuntu/actions-runner/_work/CI-Test/CI-Test/build/libs/CI-Test-0.0.1-SNAPSHOT.jar &
