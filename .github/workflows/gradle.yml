@@ -16,11 +16,17 @@ jobs:
         with:
           java-version: '11'
           distribution: 'temurin'
+          cache: 'gradle'
       - name: Make gradle executable
         run: chmod +x gradlew
       - name: Build with Gradle
-        uses: gradle/gradle-build-action@937999e9cc2425eddc7fd62d1053baf041147db7
-        with:
-          arguments: build
+        run: ./gradlew build
+  
+  run:   
+
+    runs-on: self-hosted
+    needs: [build]
+  
+    steps:
       - name: Execute jar file
         run: sudo kill -9 `sudo lsof -t -i:80` & sudo java -jar /home/ubuntu/actions-runner/_work/CI-Test/CI-Test/build/libs/CI-Test-0.0.1-SNAPSHOT.jar &
